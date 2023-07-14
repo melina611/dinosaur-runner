@@ -68,7 +68,7 @@ function drawDino() {
         jumpAndFall = false
         dinosaur.vy = 20
     }
-    if (objectHit) {
+    if (isBlockHit) {
         endGameMenu()
         return
     }
@@ -126,11 +126,11 @@ function moveTheObstacles() {
     }
 }
 
-let objectHit = false
+let isBlockHit = false
 
 function hitTheBlocks(i) {
     if (((dinosaur.x + dinosaur.width) > blocks[i].x && dinosaur.x < blocks[i].x + blocks[i].width * blocks[i].randomBlocks + blocks[i].width) && ((dinosaur.y + dinosaur.height) > blocks[i].y)) {
-        objectHit = true
+        isBlocktHit = true
     }
 }
 
@@ -178,7 +178,7 @@ function restartTheGame(event) {
         score = 0
         clearInterval(clearScore)
         clearScore = null
-        objectHit = false
+        isBlockHit = false
         arrayOfBlocks()
         dinosaur = new dino()
         window.cancelAnimationFrame(raf)
