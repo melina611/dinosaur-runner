@@ -130,7 +130,7 @@ let isBlockHit = false
 
 function hitTheBlocks(i) {
     if (((dinosaur.x + dinosaur.width) > blocks[i].x && dinosaur.x < blocks[i].x + blocks[i].width * blocks[i].randomBlocks + blocks[i].width) && ((dinosaur.y + dinosaur.height) > blocks[i].y)) {
-        isBlocktHit = true
+        isBlockHit = true
     }
 }
 
